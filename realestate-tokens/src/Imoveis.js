@@ -11,7 +11,7 @@ export default function Imoveis() {
 
   const comprarTokens = (id) => {
     axios
-      .post("http://localhost:3001/buy", { propertyId: id, quantidade: Number(compra.quantidade) })
+      .post("http://localhost:3001/buy-tokens", { propertyId: id, quantidade: Number(compra.quantidade) })
       .then((res) => alert(`Compra realizada, tokens restantes: ${res.data.restante}`))
       .catch(() => alert("Erro na compra"));
   };
